@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class TuringMachineController {
-    @GetMapping("machine")
+    @GetMapping("emulator")
     String machine(){
-        return "machine";
+        return "emulator";
     }
 
     @GetMapping("docs")

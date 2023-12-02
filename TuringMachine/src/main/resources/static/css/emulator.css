@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    top: -20px;
+}
+.container{
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container h1{
+    text-align: center;
+    padding-top: 30px;
+}
+.tape{
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+}
+.tape-cell{
+    display: table-cell;
+    border: 1px solid #000;
+    vertical-align: middle;
+    text-align: center;
+}
+.tape-cell-input{
+    background: transparent;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.tape-cell-btn{
+    font-size: 30px;
+    user-select: none;
+    cursor: pointer;
+    vertical-align: top;
+}
+.tape-cell-btn:active,
+.tape-cell-btn:hover{
+    color: blue;
+    border-color: blue;
+}
+.control-btn{
+    background: transparent;
+    border: 1px solid #000;
+    padding: 4px 5px;
+    font-size: 18px!important;
+    cursor: pointer;
+    margin-top: 10px;
+    min-width: 105px;
+}
+.control-btn:active,
+.control-btn:hover{
+    color: blue;
+    border-color: blue;
+}
+.table{
+    overflow: auto;
+    white-space: nowrap;
+    display: block;
+    padding: 0 0 5px 0;
+}
+.states{
+    width: calc(100% - 2px);
+    display: table;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.states-row {
+    display: table-row;
+}
+.states-cell {
+    display: table-cell;
+    border: 1px solid #000;
+    text-align: center;
+    min-width: 80px;
+}
+.states-btn{
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 100%;
+    margin: 2px 5px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+.states-btn:active,
+.states-btn:hover{
+    color: blue;
+    border-color: blue;
+}
+.states-cell-input{
+    background: transparent;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-align: center;
+    width: 100%;
+}
+.states-cell-name-input{
+    width: calc(100% - 40px);
+}
+div{
+    display: block;
+}

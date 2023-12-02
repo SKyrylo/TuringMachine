@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TuringMachine</title>
+    <link rel="icon" th:href="@{/images/favicon.webp}">
+    <link rel="stylesheet" th:href="@{/css/emulator.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Емулятор машини Тьюринга</h1>
+        <div class="tape">
+            <div class="tape-cell tape-cell-btn" style="height: 40px; width: 40px">‹</div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-0" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-1" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-2" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-3" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-4" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-5" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-6" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-7" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-8" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-9" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-10" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-11" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-12" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-13" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-14" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-15" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-16" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-17" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-18" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-19" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-20" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-21" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-22" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-23" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell" style="height: 40px; width: 40px">
+                <input type="text" class="tape-cell-input" id="tape-cell-24" placeholder="λ" maxlength="1"
+                       style="height: 40px; width: 40px">
+            </div>
+            <div class="tape-cell tape-cell-btn" style="height: 40px; width: 40px">›</div>
+        </div>
+        <div class="setValues">
+            <div class="input-word">
+                <label>
+                    Слово:
+                    <input type="text" id="input-word-box" value="abbaabbbba">
+                </label>
+                <input type="submit" class="control-btn" value="Розмістити">
+                <input type="submit" class="control-btn" value="Очистити стрічку">
+            </div>
+            <div class="alphabet">
+                <label>
+                    Алфавіт:
+                    <input type="text" id="alphabet-box" value="ab">
+                </label>
+                <input type="submit" class="control-btn" value="Зберегти">
+            </div>
+            <div class="controls">
+                <label>Функції:</label>
+                <input type="submit" class="control-btn" value="Запустити">
+                <input type="submit" class="control-btn" value="Зробити крок">
+                <input type="submit" class="control-btn" value="Скинути">
+            </div>
+        </div>
+        <div class="table">
+            <div class="states" id="states-box">
+                <div class="states-row" id="row-header">
+                    <div class="states-cell">
+                        "Стан"
+                        <div class="states-btn">+</div>
+                    </div>
+                    <div class="states-cell" id="states-header-a">a</div>
+                    <div class="states-cell" id="states-header-b">b</div>
+                    <div class="states-cell" id="states-header-λ">λ</div>
+                    <div class="states-cell" id="states-header-comment">Коментар</div>
+                </div>
+                <div class="states-row" id="row-q0">
+                    <div class="states-cell">
+                        <input type="text" class="states-cell-input states-cell-name-input" id="states-cell-q0" value="q0">
+                        <div class="states-btn">-</div>
+                    </div>
+                    <div class="states-cell">
+                        <input type="text" class="states-cell-input" id="states-cell-q0-a" placeholder="N">
+                    </div>
+                    <div class="states-cell">
+                        <input type="text" class="states-cell-input" id="states-cell-q0-b" placeholder="N">
+                    </div>
+                    <div class="states-cell">
+                        <input type="text" class="states-cell-input" id="states-cell-q0-λ" placeholder="N">
+                    </div>
+                    <div class="states-cell">
+                        <input type="text" class="states-cell-input" id="comment-q0" placeholder="N">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
