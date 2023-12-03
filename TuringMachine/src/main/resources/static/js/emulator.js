@@ -3,6 +3,8 @@ let currentIndex = 0;
 let tapeCells;
 let headAt = 2
 
+let currentMatrixElement = null
+let runStop = false
 let rowsInTable = [0]
 let rowsDeleted = []
 let colsToDel = []
@@ -10,6 +12,24 @@ let colsToAdd = []
 let alphabet = ['a', 'b']
 
 class machine{
+
+    static Run(){
+        const matrix = []
+        FillMatrix(matrix)
+
+        let matrixCols = alphabet
+        matrixCols.push('λ')
+        const cellVal = document.getElementById("tape-cell-"+headAt).value
+        if(!matrixCols.includes(cellVal)){
+            console.log("Error. Alphabet does not contain such symbol")
+            return null
+        }
+        const colToRest = matrixCols.indexOf(cellVal)
+        const currentVal = matrix[0][colToRest]
+        while(!runStop){
+            MakeStep(currentVal, matrix)
+        }
+    }
 
     static MoveTapeLeft() {
         currentIndex++;
@@ -80,6 +100,42 @@ for(let i = 0; i < elements.length; i++){
         headAt = parseInt(this.id.at(-1))
     })
 }
+
+
+function MakeStep(string){
+    if(string == null){
+        runStop = true;
+        const row = document.getElementById("")
+        console.log("case algorithm for cell not provided")
+        return null
+    }
+    const arr = string.split(' ')
+    if(arr.length > 3){
+        runStop = true;
+        console.log("invalid table cell input")
+        return null
+    }
+    if(arr[0].length === 1){
+        // rest of code
+    }
+    // rest of code
+    // could not finish in time
+}
+
+function FillMatrix(matrix){
+    let matrixCols = alphabet
+    matrixCols.push('λ')
+    for(let i = 0; i < rowsInTable.length; i++){
+        matrix[i] = []
+        const row = document.getElementById("row-q"+rowsInTable[i])
+        for(let j = 0; j < matrixCols.length; j++){
+            const col = row.querySelector("#states-cell-q"+i+"-"+matrixCols[j])
+            matrix[i][j] = col.value
+        }
+    }
+}
+
+
 
 function MoveHead(number){
     let prevHead = document.querySelector(".tape-cell.tape-cell-green")
