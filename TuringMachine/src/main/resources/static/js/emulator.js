@@ -13,11 +13,13 @@ class machine{
 
     static MoveTapeLeft() {
         currentIndex++;
+        MoveHead(-1)
         updateTapeView();
     }
 
     static MoveTapeRight() {
         currentIndex--;
+        MoveHead(1)
         updateTapeView();
     }
 
@@ -79,18 +81,35 @@ for(let i = 0; i < elements.length; i++){
     })
 }
 
+function MoveHead(number){
+    let prevHead = document.querySelector(".tape-cell.tape-cell-green")
+    let newHeadId =  parseInt(prevHead.querySelector(".tape-cell-input").id.at(-1)) + number
+    if(newHeadId >= 0 && newHeadId <= 24){
+        prevHead.className = "tape-cell"
+        let parent = document.getElementById("tape-cell-"+newHeadId.toString()).parentNode
+        parent.className = "tape-cell tape-cell-green"
+        headAt = newHeadId
+    }
+}
+
 
 function ManageRows(){
     for(let i = 0; i < rowsInTable.length; i++){
         for(let j = 0; j < colsToDel.length; j++){
             const columnToDelete = document.getElementById("states-cell-q"+rowsInTable.at(i)+"-"+colsToDel.at(j))
-            const parent = columnToDelete.parentElement
-            parent.remove()
+            if(columnToDelete !== null){
+                const parent = columnToDelete.parentElement
+                parent.remove()
+            }
         }
         for(let j = 0; j < colsToAdd.length; j++){
-            const lambdaCell = document.getElementById("row-q"+rowsInTable.at(i)).querySelector("#states-cell-q"+rowsInTable.at(i)+"-λ")
-            const parent = lambdaCell.parentElement
-            parent.insertAdjacentHTML("beforebegin", '<div class="states-cell"><input type="text" class="states-cell-input" id="states-cell-q'+rowsInTable.at(i)+'-'+colsToAdd.at(j)+'" placeholder="N"></div>')
+            const rowCell = document.getElementById("row-q"+rowsInTable.at(i))
+            if(rowCell !== null){
+                const lambdaCell = rowCell.querySelector("#states-cell-q"+rowsInTable.at(i)+"-λ")
+                const parent = lambdaCell.parentElement
+                parent.insertAdjacentHTML("beforebegin", '<div class="states-cell"><input type="text" class="states-cell-input" id="states-cell-q'+rowsInTable.at(i)+'-'+colsToAdd.at(j)+'" placeholder="N"></div>')
+
+            }
         }
     }
     colsToAdd = []
