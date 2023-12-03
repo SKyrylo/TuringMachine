@@ -25,6 +25,9 @@
     vertical-align: middle;
     text-align: center;
 }
+.tape-cell-green{
+    background-color: rgba(29, 225, 29, 0.7);
+}
 .tape-cell-input{
     background: transparent;
     display: inline-block;
