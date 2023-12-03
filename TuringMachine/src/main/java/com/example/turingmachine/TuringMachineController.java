@@ -14,4 +14,8 @@ public class TuringMachineController {
     String docs(){
         return "docs";
     }
+    @GetMapping("registration")
+    String registration(){
+        return "registration";
+    }
 }
